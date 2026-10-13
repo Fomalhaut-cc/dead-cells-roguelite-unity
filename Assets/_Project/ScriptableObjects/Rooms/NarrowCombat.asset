@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4000000000000000000000000000003, type: 3}
+  m_Name: NarrowCombat
+  m_EditorClassIdentifier: Project.Generation::Project.Generation.RoomTemplate
+  Id: room.narrow_combat
+  BiomeId: narrow_gutters
+  Purpose: 1
+  SizeInTiles: {x: 16, y: 10}
+  Doors:
+  - AnchorId: door_left
+    Direction: 0
+    LocalPosition: {x: -8, y: 0}
+  - AnchorId: door_right
+    Direction: 1
+    LocalPosition: {x: 8, y: 0}
+  EnemySpawnPoints:
+  - {x: -2, y: 0}
+  - {x: 2, y: 0}
+  PlayerSpawn: {x: -6, y: 0}
+  RoomPrefab: {fileID: 0}

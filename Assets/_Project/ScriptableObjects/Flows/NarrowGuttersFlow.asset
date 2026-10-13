@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4000000000000000000000000000002, type: 3}
+  m_Name: NarrowGuttersFlow
+  m_EditorClassIdentifier: Project.Generation::Project.Generation.FlowGraph
+  Id: flow.narrow_gutters
+  Nodes:
+  - Id: start
+    Kind: 0
+    BiomeId: narrow_gutters
+  - Id: combat_a
+    Kind: 1
+    BiomeId: narrow_gutters
+  - Id: combat_b
+    Kind: 1
+    BiomeId: narrow_gutters
+  - Id: shop
+    Kind: 3
+    BiomeId: narrow_gutters
+  - Id: elite
+    Kind: 2
+    BiomeId: narrow_gutters
+  - Id: boss
+    Kind: 4
+    BiomeId: narrow_gutters
+  Edges:
+  - FromId: start
+    ToId: combat_a
+    RequiredRuneId: 
+  - FromId: combat_a
+    ToId: combat_b
+    RequiredRuneId: 
+  - FromId: combat_a
+    ToId: shop
+    RequiredRuneId: 
+  - FromId: shop
+    ToId: combat_b
+    RequiredRuneId: 
+  - FromId: combat_b
+    ToId: elite
+    RequiredRuneId: 
+  - FromId: combat_b
+    ToId: boss
+    RequiredRuneId: 
+  - FromId: elite
+    ToId: boss
+    RequiredRuneId: 

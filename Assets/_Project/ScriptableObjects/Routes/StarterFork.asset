@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4000000000000000000000000000009, type: 3}
+  m_Name: StarterFork
+  m_EditorClassIdentifier: Project.Generation::Project.Generation.IslandRouteGraph
+  Id: route.starter
+  Nodes:
+  - Id: starter_ward
+    DisplayName: "起始区"
+    FloorFlowId: 
+    RequiredRuneId: 
+  - Id: narrow_gutters
+    DisplayName: "窄渠"
+    FloorFlowId: flow.narrow_gutters
+    RequiredRuneId: 
+  - Id: long_wall
+    DisplayName: "长墙"
+    FloorFlowId: 
+    RequiredRuneId: 
+  - Id: ash_gate
+    DisplayName: "灰门"
+    FloorFlowId: 
+    RequiredRuneId: 
+  Edges:
+  - FromId: starter_ward
+    ToId: narrow_gutters
+    RequiredRuneId: 
+  - FromId: starter_ward
+    ToId: long_wall
+    RequiredRuneId: rune.vault
+  - FromId: narrow_gutters
+    ToId: ash_gate
+    RequiredRuneId: 
+  - FromId: long_wall
+    ToId: ash_gate
+    RequiredRuneId: 
